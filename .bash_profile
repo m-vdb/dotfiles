@@ -1,3 +1,5 @@
+source .dotfiles_params
+
 #####Shell functions#####
 f_crawl()
 {
@@ -7,7 +9,7 @@ f_crawl()
 f_import()
 {
 	source ~/ENV2/bin/activate
-	cd ~/Documents/_WORK/Work4Labs/job-pipe/job_pipe/plugins/w4l/spiders/
+	cd $WORK_DIR/job-pipe/job_pipe/plugins/w4l/spiders/
 	./cimport.sh $1
 }
 f_django-new()
@@ -28,7 +30,7 @@ function kcel()
 ##start celery
 function scel(){
         while true
-            do source ~/ENV2/bin/activate; cd ~/Documents/_WORK/Work4Labs/job-pipe/job_pipe/projects/backoffice; ./manage.py celeryd --loglevel=DEBUG
+            do source ~/ENV2/bin/activate; cd $WORK_DIR/job-pipe/job_pipe/projects/backoffice; ./manage.py celeryd --loglevel=DEBUG
         done
 }
 #########################
@@ -41,8 +43,8 @@ alias good-data='ssh -i ~/.ssh/id_rsa_dev mvergerdelbove@good-data1.work4labs.co
 #####################
 
 #####Navigation aliases#####
-alias goto-jp='cd ~/Documents/_WORK/Work4Labs/job-pipe'
-alias goto-jp-bo='cd ~/Documents/_WORK/Work4Labs/job-pipe/job_pipe/projects/backoffice'
+alias goto-jp='cd $WORK_DIR/job-pipe'
+alias goto-jp-bo='cd $WORK_DIR/job-pipe/job_pipe/projects/backoffice'
 alias goto-djm='cd ~/ENV-test2/lib/python2.7/site-packages/django_mongoengine'
 ############################
 
@@ -56,8 +58,8 @@ alias venv-test2='source ~/ENV-test2/bin/activate'
 #####Job pipe aliases#####
 alias servers-start='launchctl start homebrew.mxcl.redis; /usr/local/bin/mongod --dbpath=/usr/local/var/db/'
 alias servers-stop='launchctl stop homebrew.mxcl.redis; pidof -k mongod'
-alias load-fixtures='venv; cd ~/Documents/_WORK/Work4Labs/job-pipe/job_pipe/projects/backoffice; ./manage.py loadbackendfixtures --all --debug'
-alias twistd-start='venv; cd ~/Documents/_WORK/Work4Labs/job-pipe; twistd -ny scrapyd.tac'
+alias load-fixtures='venv; cd $WORK_DIR/job-pipe/job_pipe/projects/backoffice; ./manage.py loadbackendfixtures --all --debug'
+alias twistd-start='venv; cd $WORK_DIR/job-pipe; twistd -ny scrapyd.tac'
 alias celery-start=scel
 alias crawl-start=f_crawl
 alias new-import=f_import
@@ -71,7 +73,7 @@ alias j-mongo='mongo mvergerdelbove_job_pipe'
 #############################
 
 #####Git completion#####
-source /Users/Max/Documents/_WORK/git-completion.bash
+source $WORK_DIR/git-completion.bash
 PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[00m\]$(__git_ps1 " (%s)") \[\033[01;34m\]\$\[\033[00m\] '
 ########################
 
