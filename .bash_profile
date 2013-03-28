@@ -51,6 +51,7 @@ alias goto-djm='cd ~/ENV-test2/lib/python2.7/site-packages/django_mongoengine'
 #####Environment aliases#####
 alias venv='source ~/ENV2/bin/activate'
 alias venvw4='source ~/ENV-W4/bin/activate'
+alias venva='source ~/ENV-ANA/bin/activate'
 alias venv-test='source ~/ENV-test/bin/activate'
 alias venv-test2='source ~/ENV-test2/bin/activate'
 #############################
