@@ -10,3 +10,4 @@
 !.emacs.d/lisp/*
 !.dotfiles_params.tpl
 !.gitignore
+!git-completion.bash
