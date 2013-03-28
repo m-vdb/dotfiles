@@ -1,0 +1,12 @@
+# Ignore everything
+*
+
+# But those files
+!.bash_profile
+!.emacs
+!.mongorc.js
+!.screenrc
+!README.md
+!.emacs.d/lisp/*
+!.dotfiles_params.tpl
+!.gitignore
