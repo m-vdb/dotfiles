@@ -8,6 +8,7 @@
 !.screenrc
 !README.md
 !.emacs.d/lisp/*
+!.emacs.d/packages/*
 !.dotfiles_params.tpl
 !.gitignore
 !git-completion.bash
