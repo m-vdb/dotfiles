@@ -1,6 +1,8 @@
 ;; Load plugins
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
+(add-to-list 'custom-theme-load-path "~/.emacs.d/packages/emacs-color-theme-solarized/")
+(load-theme 'solarized-dark t)
 
 (autoload 'project-mode "project-mode" "Project Mode" t)
 (require 'linum)

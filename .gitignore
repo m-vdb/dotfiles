@@ -12,3 +12,4 @@
 !.dotfiles_params.tpl
 !.gitignore
 !git-completion.bash
+!iterm2/*
