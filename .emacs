@@ -35,3 +35,8 @@
 
 (global-set-key (kbd "C-p")
    (lambda () (interactive) (next-line -5)))
+
+;; Uniquify buffer names
+
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'forward)
