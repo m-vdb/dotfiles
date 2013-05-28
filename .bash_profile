@@ -33,6 +33,10 @@ alias j-mongo='mongo mvergerdelbove_job_pipe'
 alias chrome="open -a '/Applications/Google Chrome.app'"
 #############################
 
+#####Utility aliases#####
+alias remove_pyc='find . -name "*.pyc" -exec rm -rf {} \;'
+#########################
+
 #####Git completion#####
 source $HOME/git-completion.bash
 PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[00m\]$(__git_ps1 " (%s)") \[\033[01;34m\]\$\[\033[00m\] '
