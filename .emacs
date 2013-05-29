@@ -8,9 +8,10 @@
 (require 'linum)
 (global-linum-mode)
 
-;; Encoding
+;; General
 
 (set-language-environment "UTF-8")
+(setq tab-stop-list (number-sequence 4 200 4))
 
 ;; Custom file
 
