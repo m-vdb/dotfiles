@@ -12,6 +12,8 @@
 
 (set-language-environment "UTF-8")
 (setq tab-stop-list (number-sequence 4 200 4))
+(setq js-indent-level 4)
+(setq-default indent-tabs-mode nil)
 
 ;; Custom file
 
