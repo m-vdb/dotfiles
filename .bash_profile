@@ -2,8 +2,8 @@ source .dotfiles_params
 
 #####SSH aliases#####
 alias lab3='ssh  mvergerdelbove@lab3.work4labs.com'
-alias dev-imp='ssh -i ~/.ssh/id_rsa_dev mvergerdelbove@dev-imports.work4labs.com'
-alias dev-imp-listen='ssh -i ~/.ssh/id_rsa_dev mvergerdelbove@dev-imports.work4labs.com -L 8888:127.0.0.1:8000'
+alias dev-imp='ssh web@dev-imports-01.work4labs.com'
+alias prod-imp='ssh web@prod-imports.work4labs.com'
 alias good-data='ssh web@good-data1.work4labs.com'
 alias demo-gd='ssh mvergerdelbove@demo-gd-01.work4labs.com'
 alias chef='ssh -A mvergerdelbove@admin-chef1.work4labs.com'
