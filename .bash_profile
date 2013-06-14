@@ -31,6 +31,7 @@ alias servers-stop='launchctl stop homebrew.mxcl.redis; pidof -k mongod'
 #####Application aliases#####
 alias j-mongo='mongo mvergerdelbove_job_pipe'
 alias chrome="open -a '/Applications/Google Chrome.app'"
+alias launch-rabbit="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.rabbitmq.plist"
 #############################
 
 #####Utility aliases#####
