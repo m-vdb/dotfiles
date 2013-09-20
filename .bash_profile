@@ -2,8 +2,8 @@ source .dotfiles_params
 
 #####SSH aliases#####
 alias lab3='ssh  mvergerdelbove@lab3.work4labs.com'
-alias dev-imp='ssh web@dev-imports-01.work4labs.com'
-alias prod-imp='ssh web@prod-imports.work4labs.com'
+alias dev-imp='ssh mvergerdelbove@dev-imports-01.work4labs.com'
+alias prod-imp='ssh mvergerdelbove@prod-imports.work4labs.com'
 alias good-data='ssh web@good-data1.work4labs.com'
 alias demo-gd='ssh mvergerdelbove@demo-gd-01.work4labs.com'
 alias chef='ssh -A mvergerdelbove@admin-chef1.work4labs.com'
@@ -20,7 +20,7 @@ alias venvw4='source ~/ENV-W4/bin/activate'
 alias venva='source ~/ENV-ANA/bin/activate'
 alias venv-test='source ~/ENV-test/bin/activate'
 alias venv-test2='source ~/ENV-test2/bin/activate'
-alias venvjob='source ~/ENV-JOP/bin/activate'
+alias venvjob='source ~/job-pipe/venv/bin/activate'
 #############################
 
 #####Job pipe aliases#####
@@ -44,7 +44,7 @@ PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[00m\]$(__git_ps1 " (%s)") \[\0
 ########################
 
 #####Path#####
-export PATH=/usr/local/Cellar:/usr/local/Cellar/libevent/2.0.20/include:/usr/local/lib:/usr/local/bin:$PATH:/usr/local/sbin:/usr/local/Cellar/php/5.3.10/bin
+export PATH=/usr/local/share/npm/bin:/usr/local/Cellar:/usr/local/Cellar/libevent/2.0.20/include:/usr/local/lib:/usr/local/bin:$PATH:/usr/local/sbin:/usr/local/Cellar/php/5.3.10/bin
 export EDITOR=emacs
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
