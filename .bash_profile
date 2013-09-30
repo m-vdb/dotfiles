@@ -6,7 +6,7 @@ alias dev-imp='ssh mvergerdelbove@dev-imports-01.work4labs.com'
 alias prod-imp='ssh mvergerdelbove@prod-imports.work4labs.com'
 alias good-data='ssh web@good-data1.work4labs.com'
 alias demo-gd='ssh mvergerdelbove@demo-gd-01.work4labs.com'
-alias chef='ssh -A mvergerdelbove@admin-chef1.work4labs.com'
+alias admin-chef='ssh -A mvergerdelbove@prod-chef-server.work4labs.com'
 #####################
 
 #####Navigation aliases#####
