@@ -1,12 +1,11 @@
 source .dotfiles_params
 
+function wssh(){
+    ssh -A mvergerdelbove@$1.work4labs.com
+}
+
 #####SSH aliases#####
-alias lab3='ssh  mvergerdelbove@lab3.work4labs.com'
-alias dev-imp='ssh mvergerdelbove@dev-imports-01.work4labs.com'
-alias prod-imp='ssh mvergerdelbove@prod-imports.work4labs.com'
-alias good-data='ssh web@good-data1.work4labs.com'
-alias demo-gd='ssh mvergerdelbove@demo-gd-01.work4labs.com'
-alias admin-chef='ssh -A mvergerdelbove@prod-chef-server.work4labs.com'
+alias admin-chef='wssh prod-chef-server'
 #####################
 
 #####Navigation aliases#####
@@ -15,7 +14,6 @@ alias goto-jp-bo='cd $WORK_DIR/job-pipe/job_pipe/projects/backoffice'
 ############################
 
 #####Environment aliases#####
-alias venv='source ~/ENV2/bin/activate'
 alias venvw4='source ~/ENV-W4/bin/activate'
 alias venva='source ~/ENV-ANA/bin/activate'
 alias venv-test='source ~/ENV-test/bin/activate'
