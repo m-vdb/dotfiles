@@ -1,49 +1,53 @@
 source .dotfiles_params
+source ~/.profile
 
 function wssh(){
-    ssh -A mvergerdelbove@$1.work4labs.com
+    user=mvergerdelbove
+    if [ $# -eq 2 ]
+      then
+        user=$2
+    fi
+    ssh -A $user@dev-haproxy.work4labs.com -t "ssh -A $1.local"
+}
+
+function dssh(){
+    user=root
+    host=$1
+    if [ $# -eq 2 ]
+      then
+        user=$2
+    fi
+    if [ "$host" = "pickaname" ]
+      then
+        host=104.236.79.93
+    fi
+    ssh -A $user@$host
 }
 
 #####SSH aliases#####
-alias admin-chef='wssh prod-chef-server'
+alias proxylab3='ssh -D 11111 mvergerdelbove@lab3.work4labs.com'
 #####################
 
-#####Navigation aliases#####
-alias goto-jp='cd $WORK_DIR/job-pipe'
-alias goto-jp-bo='cd $WORK_DIR/job-pipe/job_pipe/projects/backoffice'
-############################
-
-#####Environment aliases#####
-alias venvw4='source ~/ENV-W4/bin/activate'
-alias venva='source ~/ENV-ANA/bin/activate'
-alias venv-test='source ~/ENV-test/bin/activate'
-alias venv-test2='source ~/ENV-test2/bin/activate'
-alias venvjob='source ~/job-pipe/venv/bin/activate'
-#############################
-
-#####Job pipe aliases#####
-alias servers-start='launchctl start homebrew.mxcl.redis; /usr/local/bin/mongod --dbpath=/usr/local/var/db/'
-alias servers-stop='launchctl stop homebrew.mxcl.redis; pidof -k mongod'
-########################
-
 #####Application aliases#####
-alias j-mongo='mongo mvergerdelbove_job_pipe'
+alias v='cd /Users/maxvdbdev/Sources/vagrant/ && vagrant'
 alias chrome="open -a '/Applications/Google Chrome.app'"
-alias launch-rabbit="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.rabbitmq.plist"
 #############################
 
 #####Utility aliases#####
 alias remove_pyc='find . -name "*.pyc" -exec rm -rf {} \;'
 #########################
 
-#####Git completion#####
+#####Completion#####
 source $HOME/git-completion.bash
 PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[00m\]$(__git_ps1 " (%s)") \[\033[01;34m\]\$\[\033[00m\] '
+[[ -f ./bash-completion/bash_completion ]] && ./bash-completion/bash_completion
 ########################
 
 #####Path#####
-export PATH=/usr/local/share/npm/bin:/usr/local/Cellar:/usr/local/Cellar/libevent/2.0.20/include:/usr/local/lib:/usr/local/bin:$PATH:/usr/local/sbin:/usr/local/Cellar/php/5.3.10/bin
+export GOPATH=$GOPATH:$HOME/Sources/go
+export PATH=/usr/local/share/npm/bin:/usr/local/Cellar:/usr/local/Cellar/libevent/2.0.20/include:/usr/local/lib:/usr/local/bin:$PATH:/usr/local/sbin:/usr/local/Cellar/php/5.3.10/bin:/usr/local/opt/go/libexec/bin:$GOPATH/bin
 export EDITOR=emacs
+export ANDROID_HOME=/usr/local/opt/android-sdk
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
@@ -76,3 +80,8 @@ PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+export NVM_DIR="/Users/maxvdbdev/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+nvm use v0.10.31
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
