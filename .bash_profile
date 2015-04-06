@@ -24,10 +24,6 @@ function dssh(){
     ssh -A $user@$host
 }
 
-#####SSH aliases#####
-alias proxylab3='ssh -D 11111 mvergerdelbove@lab3.work4labs.com'
-#####################
-
 #####Application aliases#####
 alias v='cd /Users/maxvdbdev/Sources/vagrant/ && vagrant'
 alias chrome="open -a '/Applications/Google Chrome.app'"
@@ -44,7 +40,6 @@ PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[00m\]$(__git_ps1 " (%s)") \[\0
 ########################
 
 #####Path#####
-export GOPATH=$GOPATH:$HOME/Sources/go
 export PATH=/usr/local/share/npm/bin:/usr/local/Cellar:/usr/local/Cellar/libevent/2.0.20/include:/usr/local/lib:/usr/local/bin:$PATH:/usr/local/sbin:/usr/local/Cellar/php/5.3.10/bin:/usr/local/opt/go/libexec/bin:$GOPATH/bin
 export EDITOR=emacs
 export ANDROID_HOME=/usr/local/opt/android-sdk
