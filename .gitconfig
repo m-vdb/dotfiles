@@ -1,0 +1,64 @@
+[user]
+    name = mvergerdelbove
+    email = mvergerdelbove@work4labs.com
+[alias]
+    ci = commit
+    co = checkout
+    st = status
+    br = branch
+    praise = blame
+    patches = log -p
+    tree = "log --graph --decorate --abbrev-commit --date-order --pretty=format:'%Cgreen%h%Creset : %s%Cred%d%Creset (%Cblue%an%Creset, %Cblue%ar%Creset)'"
+    tree-all = "log --graph --decorate --abbrev-commit --date-order --pretty=format:'%Cgreen%h%Creset : %s%Cred%d%Creset (%Cblue%an%Creset, %Cblue%ar%Creset)' --all"
+    sq = !sh -c 'git ci -am \"squash! $(git log -1 --format='\\''%s'\\'' $@)\"' -
+    fx = !sh -c 'git ci -am \"fixup! $(git log -1 --format='\\''%s'\\'' $@)\"' -
+    ri = rebase --interactive --autosquash
+    fxri = !git fx && git ri HEAD~2
+    sup = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
+    del = "!f() { b=${1}; git branch -D $b && git push origin --delete $b;  }; f"
+    subl = !git status --porcelain | sed 's/ M //' | sed 's/?? //' | xargs subl
+[apply]
+    whitespace = strip
+
+[diff]
+    color = auto
+    rename = copy
+[pager]
+    color = true
+[status]
+    color = auto
+[credential]
+    helper = osxkeychain
+[gc]
+    auto = 0
+    packrefs = true
+[core]
+    editor = vim
+    legacyheaders = false
+    pager = less -+e
+[color]
+    diff   = auto
+    branch = auto
+    status = auto
+    pager  = true
+    ui     = auto
+[color "diff"]
+    meta = bold yellow
+    frag = bold cyan
+    old  = bold red
+    new  = bold green
+[color "status"]
+    header    = bold yellow
+    added     = bold green
+    changed   = bold red
+    untracked = white
+[branch]
+    autosetuprebase = always
+[repack]
+    usedeltabaseoffset = true
+[difftool]
+    prompt = false
+[github]
+    user = mvergerdelbove
+[push]
+	default = current
