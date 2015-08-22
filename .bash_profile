@@ -30,6 +30,9 @@ function mkmod() {
     touch $1/__init__.py
 }
 
+#####SSH aliases#####
+alias ipynb='ssh -L 8888:localhost:8888 dev-haproxy'
+#####################
 
 #####Application aliases#####
 alias v='cd /Users/maxvdbdev/Sources/vagrant/ && vagrant'
