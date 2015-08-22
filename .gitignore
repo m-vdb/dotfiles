@@ -9,7 +9,7 @@
 !README.md
 !.emacs.d/lisp/*
 !.emacs.d/packages/*
-!.dotfiles_params.tpl
+!.gitconfig
 !.gitignore
 !git-completion.bash
 !iterm2/*
