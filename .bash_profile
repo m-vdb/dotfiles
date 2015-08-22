@@ -1,5 +1,3 @@
-source .dotfiles_params
-source ~/.profile
 
 function wssh(){
     user=mvergerdelbove
