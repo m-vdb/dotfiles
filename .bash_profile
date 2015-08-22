@@ -24,6 +24,13 @@ function dssh(){
     ssh -A $user@$host
 }
 
+function mkmod() {
+    set -e
+    mkdir $1
+    touch $1/__init__.py
+}
+
+
 #####Application aliases#####
 alias v='cd /Users/maxvdbdev/Sources/vagrant/ && vagrant'
 alias chrome="open -a '/Applications/Google Chrome.app'"
