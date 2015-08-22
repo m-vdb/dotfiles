@@ -1,5 +1,5 @@
 [user]
-    name = mvergerdelbove
+    name = m-vdb
     email = mvergerdelbove@work4labs.com
 [alias]
     ci = commit
@@ -59,6 +59,6 @@
 [difftool]
     prompt = false
 [github]
-    user = mvergerdelbove
+    user = m-vdb
 [push]
 	default = current
