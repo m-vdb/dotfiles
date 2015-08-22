@@ -3,23 +3,23 @@ source ~/.profile
 
 function wssh(){
     user=mvergerdelbove
-    if [ $# -eq 2 ]
+    server=dev-haproxy
+    suffix=.work4labs.com
+    if [ $# -eq 2 ] && [ "$2" = "a" ]
       then
-        user=$2
+        server=aws-entry
+        localsuffix=
     fi
-    ssh -A $user@dev-haproxy.work4labs.com -t "ssh -A $1.local"
+    echo "# ssh bump from $server"
+    ssh -A $user@$server$suffix -t "ssh -A $1$suffix"
 }
 
 function dssh(){
     user=root
-    host=$1
-    if [ $# -eq 2 ]
+    host=104.236.79.93
+    if [ $# -eq 1 ]
       then
-        user=$2
-    fi
-    if [ "$host" = "pickaname" ]
-      then
-        host=104.236.79.93
+        host=104.236.218.42
     fi
     ssh -A $user@$host
 }
