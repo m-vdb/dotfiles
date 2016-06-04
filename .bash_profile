@@ -3,11 +3,6 @@ function wssh(){
     user=mvergerdelbove
     server=dev-haproxy
     suffix=.work4labs.com
-    if [ $# -eq 2 ] && [ "$2" = "a" ]
-      then
-        server=aws-entry
-        localsuffix=
-    fi
     echo "# ssh bump from $server"
     ssh -A $user@$server$suffix -t "ssh -A $1$suffix"
 }
