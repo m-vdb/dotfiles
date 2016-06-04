@@ -9,10 +9,10 @@ function wssh(){
 
 function dssh(){
     user=root
-    host=104.236.79.93
+    host=104.236.218.42
     if [ $# -eq 1 ]
       then
-        host=104.236.218.42
+        host=104.131.50.117
     fi
     ssh -A $user@$host
 }
