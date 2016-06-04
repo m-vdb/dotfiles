@@ -23,6 +23,10 @@ function mkmod() {
     touch $1/__init__.py
 }
 
+function 2coffee() {
+    js2coffee $1 > temp && cat temp > $1 && rm temp
+}
+
 #####SSH aliases#####
 alias ipynb='ssh -L 8888:localhost:8888 dev-haproxy'
 #####################
