@@ -31,10 +31,6 @@ PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[00m\]$(__git_ps1 " (%s)") \[\0
 export GIT_MERGE_AUTOEDIT=no
 ########################
 
-#####Ruby#####
-source ~/.profile
-##############
-
 #####Path#####
 export ANDROID_HOME=/Users/mvdb/Library/Android/sdk
 export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home"
