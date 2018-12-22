@@ -29,3 +29,9 @@ Editor
 [Sublime Text](https://www.sublimetext.com/) with
 [Agila Theme](https://packagecontrol.io/packages/Agila%20Theme), installable through Package Control.
 More configuration available in the `sublime/` folder.
+
+To open files from the command line `subl`, do the following:
+
+```bash
+$ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+```
