@@ -12,7 +12,7 @@ Machine dependencies
 - Install [Brew](https://brew.sh/) with the following packages:
 
 ```bash
-$ bew install htop imagemagick openssl postgis postgresql python3 redis
+$ brew install htop imagemagick openssl postgis postgresql python3 redis
 ```
 
 - Install [nvm](https://github.com/creationix/nvm#installation) with NodeJS version `v8.11.3`
