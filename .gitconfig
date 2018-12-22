@@ -1,6 +1,6 @@
 [user]
     name = m-vdb
-    email = mvergerdelbove@work4labs.com
+    email = me@maxvdb.com
 [alias]
     ci = commit
     co = checkout
@@ -62,3 +62,6 @@
     user = m-vdb
 [push]
 	default = current
+
+[diff "localizablestrings"]
+    textconv = "iconv -f utf-16 -t utf-8"
