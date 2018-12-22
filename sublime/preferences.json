@@ -1,0 +1,14 @@
+{
+  "color_scheme": "Packages/Agila Theme/Agila Origin Oceanic Next.tmTheme",
+  "ensure_newline_at_eof_on_save": true,
+  "font_size": 12,
+  "ignored_packages":
+  [
+    "Vintage"
+  ],
+  "scroll_past_end": true,
+  "show_definitions": true,
+  "tab_size": 2,
+  "theme": "Agila Origin.sublime-theme",
+  "translate_tabs_to_spaces": true
+}

@@ -1,0 +1,16 @@
+{
+  "extensions":
+  [
+    "Appfile",
+    "Cryptexfile",
+    "Fastfile",
+    "Gemfile",
+    "Gemfile.lock",
+    "Gymfile",
+    "Matchfile",
+    "Pluginfile",
+    "Podfile",
+    "Podfile.lock",
+    "SnapFile"
+  ]
+}
