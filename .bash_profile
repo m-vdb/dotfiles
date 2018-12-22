@@ -13,13 +13,7 @@ function ssh_fingerprint() {
     ssh-keygen -lf $1 -E md5
 }
 
-#####SSH aliases#####
-alias ipynb='ssh -L 8888:localhost:8888 dev-haproxy'
-#####################
-
 #####Application aliases#####
-alias v='cd /Users/maxvdbdev/Sources/vagrant/ && vagrant'
-alias chrome="open -a '/Applications/Google Chrome.app'"
 alias pw='openssl rand -base64 32'
 #############################
 
