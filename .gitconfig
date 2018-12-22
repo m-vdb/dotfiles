@@ -1,6 +1,6 @@
 [user]
-    name = m-vdb
-    email = me@maxvdb.com
+    name = <your username>
+    email = <your email>
 [alias]
     ci = commit
     co = checkout
