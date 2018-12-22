@@ -1,22 +1,4 @@
 
-function wssh(){
-    user=mvergerdelbove
-    server=dev-haproxy
-    suffix=.work4labs.com
-    echo "# ssh bump from $server"
-    ssh -A $user@$server$suffix -t "ssh -A $1$suffix"
-}
-
-function dssh(){
-    user=root
-    host=104.236.218.42
-    if [ $# -eq 1 ]
-      then
-        host=104.131.50.117
-    fi
-    ssh -A $user@$host
-}
-
 function mkmod() {
     set -e
     mkdir $1
@@ -25,6 +7,10 @@ function mkmod() {
 
 function 2coffee() {
     js2coffee $1 > temp && cat temp > $1 && rm temp
+}
+
+function ssh_fingerprint() {
+    ssh-keygen -lf $1 -E md5
 }
 
 #####SSH aliases#####
@@ -39,6 +25,9 @@ alias pw='openssl rand -base64 32'
 
 #####Utility aliases#####
 alias remove_pyc='find . -name "*.pyc" -exec rm -rf {} \;'
+alias ios_screenshot='xcrun simctl io booted screenshot'
+alias gti='git'  # typo
+alias fastlane='bundle exec fastlane'  # perfs
 #########################
 
 #####Git#####
@@ -48,10 +37,16 @@ PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[00m\]$(__git_ps1 " (%s)") \[\0
 export GIT_MERGE_AUTOEDIT=no
 ########################
 
+#####Ruby#####
+source ~/.profile
+##############
+
 #####Path#####
-export PATH=/usr/local/share/npm/bin:/usr/local/Cellar:/usr/local/Cellar/libevent/2.0.20/include:/usr/local/lib:/usr/local/bin:$PATH:/usr/local/sbin:/usr/local/Cellar/php/5.3.10/bin:/usr/local/opt/go/libexec/bin:$GOPATH/bin
-export EDITOR=emacs
-export ANDROID_HOME=/usr/local/opt/android-sdk
+export ANDROID_HOME=/Users/mvdb/Library/Android/sdk
+export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home"
+export ANDROID_SDK_ROOT=$ANDROID_HOME
+export ANDROID_NDK="/Applications/Android Studio.app/Contents/plugins/android-ndk"
+export PATH=/usr/local/share/npm/bin:/usr/local/Cellar:/usr/local/Cellar/libevent/2.0.20/include:/usr/local/lib:/usr/local/bin:$PATH:/usr/local/sbin:/usr/local/Cellar/php/5.3.10/bin:/usr/local/opt/go/libexec/bin:$GOPATH/bin:$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/tools/bin
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
@@ -86,9 +81,6 @@ PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[
 export PATH="/usr/local/heroku/bin:$PATH"
 export NVM_DIR="$(pwd)/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-nvm use stable
-
-### Docker
-eval "$(docker-machine env default)"
+nvm use v8.11.3
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
