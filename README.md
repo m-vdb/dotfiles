@@ -18,6 +18,23 @@ $ brew install htop imagemagick openssl postgis postgresql python3 redis
 - Install [nvm](https://github.com/creationix/nvm#installation) with NodeJS version `v8.11.3`
 - Install [rvm](https://rvm.io/rvm/install) with Ruby version `2.3.7`
 
+Launching services at startup
+-----------------------------
+
+```bash
+# launch Postgres at startup
+$ ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
+
+# start Postgres now
+$ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+
+# launch Redis at startup
+$ ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents
+
+# start Redis now
+$ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist
+```
+
 Tweaks
 ------
 
