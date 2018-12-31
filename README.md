@@ -52,3 +52,14 @@ To open files from the command line `subl`, do the following:
 ```bash
 $ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 ```
+
+Moreover, I use the following packages:
+
+- _ApacheConf_: syntax highlighting for htaccess and .conf files
+- _DocBlockr_: shortcuts to write doc blocks in JS
+- _Dockerfile Syntax Highlighting_: syntax highlighting for Dockerfile
+- _GitGutter_: quick view for diffs inside Sublime
+- _JSON Reindent_
+- _SCSS_: syntax highlighting for SCSS
+- _SublimeLinter-contrib-yamllint_: linter for yaml files
+- _Trimmer_: plugin for cleaning up whitespaces
