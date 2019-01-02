@@ -62,4 +62,5 @@ Moreover, I use the following packages:
 - _JSON Reindent_
 - _SCSS_: syntax highlighting for SCSS
 - _SublimeLinter-contrib-yamllint_: linter for yaml files
+- _sublack_: python auto formatting
 - _Trimmer_: plugin for cleaning up whitespaces
