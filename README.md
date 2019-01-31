@@ -60,6 +60,7 @@ Moreover, I use the following packages:
 - _Dockerfile Syntax Highlighting_: syntax highlighting for Dockerfile
 - _GitGutter_: quick view for diffs inside Sublime
 - _JSON Reindent_
+- _JsPrettiere_: javascript auto formatting
 - _SCSS_: syntax highlighting for SCSS
 - _SublimeLinter-contrib-yamllint_: linter for yaml files
 - _sublack_: python auto formatting
